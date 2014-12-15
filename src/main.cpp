@@ -1,8 +1,18 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <SDL.h>
-#include <SDL_image.h>
-#include "Vector2D.h"
+#ifdef _WIN32
+	#include <stdio.h>
+	#include <stdlib.h>
+	#include <SDL.h>
+	#include <SDL_image.h>
+	#include "Vector2D.h"
+#elif linux
+	#include <stdio.h>
+	#include <stdlib.h>
+	#include <SDL2/SDL.h>
+	#include <SDL2/SDL_image.h>
+	#include <SDL2/SDL_ttf.h>
+	#include <SDL2/SDL_mixer.h>
+	#include "Vector2D.h"
+#endif
 
 using namespace std;
 
